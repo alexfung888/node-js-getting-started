@@ -2,22 +2,23 @@
   // See https://go.microsoft.com/fwlink/?LinkId=733558
   // for the documentation about the tasks.json format
   "version": "0.1.0",
-  "command": "npm",
+  "command": "cmd",
   "isShellCommand": true,
-  "showOutput": "always",
-  "suppressTaskName": true,
-  "tasks": [
+  "showOutput": "always"
+  , "args": ["/C"]
+  , "suppressTaskName": true
+  , "tasks": [
     {
       "taskName": "install",
-      "args": ["install"]
+      "args": ["npm", "install"]
     },
     {
-      "taskName": "update",
-      "args": ["update"]
+      "taskName": "push to Heroku",
+      "args": ["git", "push", "heroku", "master"]
     },
     {
       "taskName": "test",
       "args": ["run", "test"]
     }
   ]
-}
+}}
