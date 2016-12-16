@@ -13,12 +13,24 @@
       "args": ["npm", "install"]
     },
     {
+      "taskName": "start local server",
+      "args": ["heroku", "local"]
+    }
+    , {
       "taskName": "push to Heroku",
       "args": ["git", "push", "heroku", "master"]
-    },
-    {
-      "taskName": "test",
-      "args": ["run", "test"]
+    }
+    , {
+      "taskName": "Heroku turn on",
+      "args": ["heroku", "ps:scale", "web=1"]
+    }
+    , {
+      "taskName": "browser to heroku server",
+      "args": ["heroku", "open"]
+    }
+    , {
+      "taskName": "Heroku turn off",
+      "args": ["heroku", "ps:scale", "web=0"]
     }
   ]
-}}
+}

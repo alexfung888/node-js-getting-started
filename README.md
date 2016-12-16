@@ -13,14 +13,32 @@ git push keroku master
 heroku ps:scale web=1
 ```
 and launch browser to generated URL
+add argument to URL path
 ```command
 heroku open
+heroku open cool
 ```
 ## local server
 * npm install
 * start local server
 ```command
 heroku local web 
+```
+
+## console
+starts a remote connection to a one-off dyno
+```command
+heroku run node
+heroku run bash
+```
+Uses port 5000, will not work behind proxy server.
+
+## env
+heroku local refers to the .env file when the server starts up.
+heroku cloud use commands to config
+```command
+heroku config
+heroku config:set TIMES=2
 ```
 
 # node-js-getting-started
