@@ -1,3 +1,28 @@
+# Note
+
+sample code for [Heroku Getting Started for Nodejs](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
+
+## config
+
+* config vsc task for npm
+
+## remote server
+```command
+heroku create
+git push keroku master
+heroku ps:scale web=1
+```
+and launch browser to generated URL
+```command
+heroku open
+```
+## local server
+* npm install
+* start local server
+```command
+heroku local web 
+```
+
 # node-js-getting-started
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
