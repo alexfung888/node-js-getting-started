@@ -7,8 +7,13 @@ sample code for [Heroku Getting Started for Nodejs](https://devcenter.heroku.com
 * config vsc task for npm
 
 ## remote server
+`heroku create` is short for `heroku apps:create`.
+Creating without a name will get a random name. 
+However, giving a name often leads to name conflict.
+
 ```command
-heroku create
+heroku create [name]
+heroku apps:rename new-name -app old-name
 git push keroku master
 heroku ps:scale web=1
 ```
